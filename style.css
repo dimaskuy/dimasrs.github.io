@@ -151,8 +151,16 @@ footer a:hover {
     font-size: 28px;
   }
 
+  .lightbox img {
+    width: 360px;
+  }
+
   .jumbotron img {
     width: 140px;
+  }
+
+  .jumbotron h2 {
+    font-size: 2rem;
   }
 
   .card .card-text {
