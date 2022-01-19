@@ -11,10 +11,17 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+    <!-- Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <title>DimasRS Portfolio!</title>
   </head>
   <body>
+    <!-- Lightbox! -->
+    <div class="lightbox">
+      <img src="" alt="" class="shadow" />
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
       <div class="container">
@@ -42,7 +49,7 @@
     </nav>
 
     <!-- Jumbotron -->
-    <section class="jumbotron text-center pt-4" id="home">
+    <section class="jumbotron text-center pt-4" id="home" data-aos="fade-up">
       <img src="img/dimas.png" class="rounded-circle shadow-sm mt-5 mb-2" alt="DimasRS' Photo" />
       <h2 class="display-4 fw-bold">Dimas Ramadhan S.</h2>
       <p>With great powers, comes great responsibility <span class="wave-emoji">👋</span></p>
@@ -59,20 +66,20 @@
     <!-- About Me -->
     <section class="mt-5" id="about">
       <div class="container">
-        <div class="row text-center mb-4">
+        <div class="row text-center mb-4" data-aos="fade-down">
           <div class="col">
             <h2 class="fw-bold">About Me</h2>
           </div>
         </div>
 
         <div class="row justify-content-center">
-          <div class="col-sm-5 mb-lg-0 mb-3 px-lg-0 px-5">
+          <div class="col-sm-5 mb-lg-0 mb-3 px-lg-0 px-5" data-aos="fade-right">
             <p>
-              My name is Dimas Ramadhan Syahpputra, 15 years old. And became interested in coding at 14 years old. My first programming language is javascript. I chose it because many people have recommended it and the syntax is quite
+              My name is Dimas Ramadhan Syahpputra, 15 years old. And became interested in coding at 14 years old. My first programming language is JavaScript. I chose it because many people have recommended it and the syntax is quite
               simple. Currently, I want to be a senior developer who is an expert in creating an application that is useful for many people.
             </p>
           </div>
-          <div class="col-sm-5 px-lg-0 px-5">
+          <div class="col-sm-5 px-lg-0 px-5" data-aos="fade-left">
             <p>
               I am also interested in things related to design. Starting from its appearance to its uniqueness. I also want to explore how users are comfortable when running an application with its appearance. Or also called UI/UX. I think
               it is very important especially for front-end Developers.
@@ -98,7 +105,7 @@
           </div>
         </div>
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" data-aos="zoom-in">
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="card border-0 bg-transparent">
               <img src="img/thumbs/1.png" class="card-img-top shadow" alt="Gambar 1" />
@@ -106,35 +113,35 @@
               <hh3 class="card-text fw-bold fs-2 text-white">Gambar 1</hh3>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 mb-5">
+          <div class="col-lg-4 col-md-6 mb-5" data-aos="zoom-in" data-aos-delay="200">
             <div class="card border-0 bg-transparent">
               <img src="img/thumbs/2.png" class="card-img-top shadow" alt="Gambar 2" />
               <div class="bg-img"></div>
               <hh3 class="card-text fw-bold fs-2 text-white">Gambar 2</hh3>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 mb-5">
+          <div class="col-lg-4 col-md-6 mb-5" data-aos="zoom-in" data-aos-delay="400">
             <div class="card border-0 bg-transparent">
               <img src="img/thumbs/3.png" class="card-img-top shadow" alt="Gambar 3" />
               <div class="bg-img"></div>
               <h3 class="card-text fw-bold fs-2 text-white">Gambar 3</h3>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 mb-5">
+          <div class="col-lg-4 col-md-6 mb-5" data-aos="zoom-in" data-aos-delay="600">
             <div class="card border-0 bg-transparent">
               <img src="img/thumbs/4.png" class="card-img-top shadow" alt="Gambar π" />
               <div class="bg-img"></div>
               <h3 class="card-text fw-bold fs-2 text-white">Gambar π</h3>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 mb-5">
+          <div class="col-lg-4 col-md-6 mb-5" data-aos="zoom-in" data-aos-delay="800">
             <div class="card border-0 bg-transparent">
               <img src="img/thumbs/5.png" class="card-img-top shadow" alt="Gambar 5" />
               <div class="bg-img"></div>
               <h3 class="card-text fw-bold fs-2 text-white">Gambar 5</h3>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 mb-5">
+          <div class="col-lg-4 col-md-6 mb-5" data-aos="zoom-in" data-aos-delay="1000">
             <div class="card border-0 bg-transparent">
               <img src="img/thumbs/6.png" class="card-img-top shadow" alt="Gambar 6" />
               <div class="bg-img"></div>
@@ -153,7 +160,7 @@
     </svg>
 
     <!-- Contact -->
-    <section class="pb-5" id="contact">
+    <section class="pb-5" id="contact" data-aos="fade-up">
       <div class="container">
         <div class="row text-center">
           <h2 class="fw-bold mb-4">Need a Contact?</h2>
@@ -199,9 +206,20 @@
     <!-- Sambungin Library JavaScript Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+    <!-- Animate on Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- My JavaScript -->
     <script>
+      AOS.init({
+        once: true,
+        duration: 600,
+      });
+
       const cards = Array.from(document.querySelectorAll(".card"));
+      const lightbox = document.querySelector(".lightbox");
+      const lightboxImg = lightbox.querySelector("img");
+
       cards.forEach((card) => {
         card.addEventListener("mouseenter", function (e) {
           e.target.setAttribute("id", "show");
@@ -209,7 +227,24 @@
         card.addEventListener("mouseleave", function (e) {
           e.target.removeAttribute("id", "show");
         });
+
+        card.addEventListener("click", function () {
+          lightbox.classList.add("show");
+          const cardImg = card.querySelector("img");
+          console.log(cardImg);
+          lightboxImg.src = cardImg.src;
+        });
       });
+
+      lightbox.addEventListener("click", function () {
+        lightbox.classList.remove("show");
+      });
+
+      // card.forEach((img) => {
+      //   img.addEventListener("click", function () {
+      //     lightbox.style.display = "block";
+      //   });
+      // });
     </script>
   </body>
 </html>

@@ -25,6 +25,28 @@ h2 {
   transform: rotate(180deg);
 }
 
+.lightbox {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+}
+
+.lightbox img {
+  width: 500px;
+  border-radius: 10px;
+  animation: animasiLightboxImg 0.3s;
+}
+
+.lightbox.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: animasiLightbox 0.3s;
+}
+
 nav {
   background: linear-gradient(to right, rgb(63, 21, 160), rgb(76, 0, 255));
   opacity: 0.9;
@@ -162,5 +184,22 @@ footer a:hover {
   } /* Reset for the last half to pause */
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@keyframes animasiLightbox {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animasiLightboxImg {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
   }
 }
