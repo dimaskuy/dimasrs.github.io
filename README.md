@@ -1,7 +1,4 @@
 # dimasrs.github.io
-My Simple Portfolio with Bootstrap v5.
-
-
 A personal simple portfolio created using:
 
 <ol>
