@@ -3,7 +3,7 @@ A personal simple portfolio created using:
 
 <ol>
   <li>Bootstrap 5  <br>
-      https://getbootstrap.com/docs/5.1/getting-started/accessibility/).
+      https://getbootstrap.com/docs/5.1/getting-started/introduction/.
   </li>
   <li>Animate on Scroll <br>
       https://michalsnik.github.io/aos/.
