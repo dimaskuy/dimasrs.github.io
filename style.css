@@ -15,9 +15,44 @@ h2 {
   line-height: 150%;
 }
 
+button {
+  transition: 0.15s !important;
+}
+
+button,
+input,
+textarea {
+  outline: none;
+  box-shadow: none !important;
+  border: 2px solid transparent !important;
+}
+
+input,
+textarea {
+  border: 1px solid #0a19313b !important;
+}
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+  border: 1px solid #0a1931 !important;
+}
+
+button:hover {
+  border: 2px solid #0a1931 !important;
+}
+button:active {
+  transform: scale(0.98);
+}
+
 .btn-primary {
   background-color: rgb(76, 0, 255) !important;
+  border: 2px solid transparent !important;
 }
+.btn-primary:hover {
+  border: 2px solid #0a1931 !important;
+}
+
 .text-primary {
   color: rgb(76, 0, 255) !important;
 }
@@ -149,6 +184,23 @@ footer a:hover {
 
   h2 {
     font-size: 28px;
+  }
+
+  nav ul {
+    padding-top: 0.5rem;
+    text-align: center;
+  }
+
+  nav ul li {
+    transition: 0.3s;
+  }
+
+  nav ul li:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+  }
+  nav ul li:active {
+    transform: scale(0.98);
   }
 
   .lightbox img {
