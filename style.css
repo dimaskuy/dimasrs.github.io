@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
+p {
+  font-family: "Baskervville Libre", serif;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+h2 {
+  color: rgb(76, 0, 255) !important;
+  line-height: 150%;
+}
+
+.btn-primary {
+  background-color: rgb(76, 0, 255) !important;
+}
+.text-primary {
+  color: rgb(76, 0, 255) !important;
+}
+.rotated {
+  transform: rotate(180deg);
+}
+
+nav {
+  background: linear-gradient(to right, rgb(63, 21, 160), rgb(76, 0, 255));
+  opacity: 0.9;
+}
+
+#home {
+  padding-top: unset;
+}
+
+section {
+  padding-top: 5rem;
+}
+
+.jumbotron {
+  /* padding: 2rem 1rem; */
+  /* background: rgba(224, 212, 253, 0.164); */
+}
+
+.jumbotron .wave-emoji {
+  animation: animasiWave infinite 2s;
+  display: inline-block;
+}
+
+.jumbotron a {
+  opacity: 0.8;
+  text-decoration: none;
+  font-size: 14px;
+}
+.jumbotron a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+#projects {
+  background: #faf8ff;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img-top {
+  border-radius: 30px;
+  width: 19rem;
+  transition: 0.15s;
+  cursor: zoom-in;
+}
+
+.card .bg-img {
+  width: 19rem;
+  height: 13.7rem;
+  background-color: #faf8ff;
+  border-radius: 30px;
+  opacity: 0;
+  display: none;
+  cursor: zoom-in;
+  transform: scale(1.05);
+  /* transition: 0.2s; */
+}
+
+.card .card-text {
+  display: none;
+}
+
+.card#show .card-img-top {
+  position: relative;
+  transform: scale(1.05);
+}
+
+.card#show .bg-img,
+.card#show .card-text {
+  position: absolute;
+  display: unset;
+}
+.card#show .bg-img {
+  opacity: 0.3;
+}
+
+footer .container {
+  background-color: #faf8ff;
+}
+
+footer h2 {
+  opacity: 0.5;
+}
+footer a {
+  opacity: 0.5;
+}
+footer a:hover {
+  opacity: 1 !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  p {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .jumbotron img {
+    width: 140px;
+  }
+
+  .card .card-text {
+    font-size: 32px !important;
+  }
+}
+
+@keyframes animasiWave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
