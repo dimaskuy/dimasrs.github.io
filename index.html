@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
     <!-- Animate on Scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- SweetAlert 2 -->
+    <link href="swal2/sweetalert2.min.css" rel="stylesheet" />
 
     <title>DimasRS Portfolio!</title>
   </head>
@@ -53,7 +55,7 @@
       <img src="img/dimas.png" class="rounded-circle shadow-sm mt-5 mb-2" alt="DimasRS' Photo" />
       <h2 class="display-4 fw-bold">Dimas Ramadhan S.</h2>
       <p>With great powers, comes great responsibility <span class="wave-emoji">👋</span></p>
-      <a class="text-dark d-inline-block mt-2" href="https://github.com/dimaskuy" role="button">View My GitHub Profile <i class="bi bi-github ml-5"></i></a>
+      <a class="text-dark d-inline-block mt-2" href="https://github.com/dimaskuy" role="button" target="_blank">View My GitHub Profile <i class="bi bi-github ml-5"></i></a>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#faf8ff"
@@ -172,15 +174,15 @@
           <form name="submit-to-google-sheet">
             <div class="mb-3">
               <label for="name" class="form-label fw-bold">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Your name..." name="name" />
+              <input type="text" class="form-control" id="name" placeholder="Your name..." name="name" required />
             </div>
             <div class="mb-3">
               <label for="email" class="form-label fw-bold">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="example123@domain.com" name="email" />
+              <input type="email" class="form-control" id="email" placeholder="example123@domain.com" name="email" required />
             </div>
             <div class="mb-3">
               <label for="message" class="form-label fw-bold btn-sumbit">Leave a message</label>
-              <textarea class="form-control" id="message" rows="3" placeholder="Write a message here..." name="message"></textarea>
+              <textarea class="form-control" id="message" rows="3" placeholder="Write a message here..." name="message" required></textarea>
             </div>
             <div class="d-grid gap-2">
               <button type="submit" class="btn btn-primary fw-bold btn-submit">Send!</button>
@@ -203,7 +205,7 @@
         ></path>
       </svg>
       <div class="container text-center px-2 py-2">
-        <h2 class="fs-6 text-primary px-5">Created with Bootstrap Framework by <a href="https://github.com/dimaskuy" class="text-primary">DimasRS</a></h2>
+        <h2 class="fs-6 text-primary px-5">Created with Bootstrap Framework by <a href="https://www.instagram.com/_dimaskuy/" class="text-primary" target="_blank">DimasRS</a></h2>
       </div>
     </footer>
 
@@ -214,7 +216,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- SweetAlert2 -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="swal2/sweetalert2.all.min.js"></script>
 
     <!-- My JavaScript -->
     <script>

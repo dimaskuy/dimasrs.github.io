@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
-/* html {
-  scroll-behavior: smooth;
-} */
+html {
+  /* scroll-behavior: smooth; */
+  overflow-x: hidden;
+}
 
 p {
   font-family: "Baskervville Libre", serif;
@@ -12,6 +13,7 @@ p {
 }
 
 h2 {
+  font-family: "Montserrat", sans-serif !important;
   color: rgb(76, 0, 255) !important;
   line-height: 150%;
 }
@@ -59,7 +61,6 @@ button:active {
 
 .swal2-container .swal2-title {
   font-size: 32px !important;
-  font-family: "Montserrat", sans-serif !important;
 }
 
 .lightbox {
@@ -201,11 +202,11 @@ footer a:hover {
     transition: 0.3s;
   }
 
-  nav ul li:hover {
+  nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
   }
-  nav ul li:active {
+  nav ul li a:active {
     transform: scale(0.98);
   }
 
@@ -214,7 +215,7 @@ footer a:hover {
   }
 
   .jumbotron img {
-    width: 140px;
+    width: 120px;
   }
 
   .jumbotron h2 {
