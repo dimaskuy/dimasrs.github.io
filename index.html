@@ -169,21 +169,25 @@
 
       <div class="row justify-content-center">
         <div class="col-sm-6 col-10">
-          <form>
+          <form name="submit-to-google-sheet">
             <div class="mb-3">
               <label for="name" class="form-label fw-bold">Name</label>
-              <input type="email" class="form-control" id="name" placeholder="Your name..." />
+              <input type="text" class="form-control" id="name" placeholder="Your name..." name="name" />
             </div>
             <div class="mb-3">
               <label for="email" class="form-label fw-bold">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="example123@domain.com" />
+              <input type="email" class="form-control" id="email" placeholder="example123@domain.com" name="email" />
             </div>
             <div class="mb-3">
-              <label for="message" class="form-label fw-bold">Leave a message</label>
-              <textarea class="form-control" id="message" rows="3" placeholder="Write a message here..."></textarea>
+              <label for="message" class="form-label fw-bold btn-sumbit">Leave a message</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Write a message here..." name="message"></textarea>
             </div>
             <div class="d-grid gap-2">
-              <button type="submit" class="btn btn-primary fw-bold">Send!</button>
+              <button type="submit" class="btn btn-primary fw-bold btn-submit">Send!</button>
+              <button class="btn btn-primary btn-loading fw-bold" type="button" disabled>
+                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
             </div>
           </form>
         </div>
@@ -208,6 +212,9 @@
 
     <!-- Animate on Scroll -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- My JavaScript -->
     <script>
@@ -240,11 +247,39 @@
         lightbox.classList.remove("show");
       });
 
-      // card.forEach((img) => {
-      //   img.addEventListener("click", function () {
-      //     lightbox.style.display = "block";
-      //   });
-      // });
+      // Mengirimkan teks formulir contact keGoogle Sheets
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwgyLDcNIYi59HaidZN2BhcjyhsVxpd4w17ax9nuG0Eqz6pcKMeWpu0OQPk9PvCeUAJ/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const btnSubmit = document.querySelector(".btn-submit");
+      const btnLoading = document.querySelector(".btn-loading");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // Ketika tombol submit di-klik, munculkan btn-loading
+        btnSubmit.style.display = "none";
+        btnLoading.style.display = "block";
+
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            console.log("Success!", response);
+            Swal.fire({
+              icon: "success",
+              title: "Success to send the message!",
+            });
+            btnSubmit.style.display = "block";
+            btnLoading.style.display = "none";
+          })
+
+          .catch((error) => {
+            console.error("Error!", error.message);
+            Swal.fire({
+              icon: "error",
+              title: "Failed to send the message :(",
+            });
+          });
+
+        form.reset();
+      });
     </script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 /* html {
   scroll-behavior: smooth;
@@ -29,13 +30,13 @@ textarea {
 
 input,
 textarea {
-  border: 1px solid #0a19313b !important;
+  border: 3px solid #0a19313b !important;
 }
 input:hover,
 textarea:hover,
 input:focus,
 textarea:focus {
-  border: 1px solid #0a1931 !important;
+  border: 3px solid #0a1931e3 !important;
 }
 
 button:hover {
@@ -47,10 +48,6 @@ button:active {
 
 .btn-primary {
   background-color: rgb(76, 0, 255) !important;
-  border: 2px solid transparent !important;
-}
-.btn-primary:hover {
-  border: 2px solid #0a1931 !important;
 }
 
 .text-primary {
@@ -58,6 +55,11 @@ button:active {
 }
 .rotated {
   transform: rotate(180deg);
+}
+
+.swal2-container .swal2-title {
+  font-size: 32px !important;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 .lightbox {
@@ -160,6 +162,10 @@ section {
 }
 .card#show .bg-img {
   opacity: 0.3;
+}
+
+form .btn-loading {
+  display: none;
 }
 
 footer .container {
