@@ -25,7 +25,7 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
       <div class="container">
         <a class="navbar-brand fw-bold fs-4" href="#">DimasRS!</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,6 +43,9 @@
               <a class="nav-link fw-bold" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link fw-bold" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link fw-bold" href="#contact">Contact</a>
             </li>
           </ul>
@@ -51,7 +54,7 @@
     </nav>
 
     <!-- Jumbotron -->
-    <section class="jumbotron text-center mt-4 pt-5" id="home" data-aos="fade-up">
+    <section class="jumbotron text-center pt-5" id="home" data-aos="fade-up">
       <img src="img/dimas.png" class="rounded-circle shadow-sm mt-5 mb-2" alt="DimasRS' Photo" />
       <h2 class="display-4 fw-bold">Dimas Ramadhan S.</h2>
       <p>With great powers, comes great responsibility <span class="wave-emoji">👋</span></p>
@@ -99,7 +102,7 @@
     </section>
 
     <!-- Projects -->
-    <section class="pb-4" id="projects">
+    <section id="projects">
       <div class="container">
         <div class="row text-center mb-4">
           <div class="col">
@@ -107,7 +110,7 @@
           </div>
         </div>
 
-        <div class="row justify-content-center" data-aos="zoom-in">
+        <div class="row justify-content-center project" data-aos="zoom-in">
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="card border-0 bg-transparent">
               <img src="img/thumbs/1.png" class="card-img-top shadow" alt="Gambar 1" />
@@ -161,6 +164,44 @@
       ></path>
     </svg>
 
+    <!-- TiltJS -->
+    <section class="pb-5" id="skills">
+      <div class="container">
+        <div class="row text-center mb-4">
+          <div class="col">
+            <h2 class="fw-bold mb-4">My Skills!</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4">
+            <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">
+              <div class="skills-box html5-box text-center shadow">
+                <img src="img/html.png" alt="HTML5" id="html5" />
+                <h4 class="skill-name text-light mb-3">HTML5</h4>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">
+              <div class="skills-box css-box text-center shadow">
+                <img src="img/css.png" alt="CSS3" id="css3" />
+                <h4 class="skill-name text-light mb-3">CSS3</h4>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">
+              <div class="skills-box js-box text-center shadow">
+                <img src="img/js.png" alt="JavaScript" id="js" />
+                <h4 class="skill-name text-light mb-3">JavaScript</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact -->
     <section class="pb-5" id="contact" data-aos="fade-up">
       <div class="container">
@@ -205,7 +246,7 @@
         ></path>
       </svg>
       <div class="container text-center px-2 py-2">
-        <h2 class="fs-6 text-primary px-5">Created with Bootstrap Framework by <a href="https://www.instagram.com/_dimaskuy/" class="text-primary" target="_blank">DimasRS</a></h2>
+        <h2 class="fs-6 px-5">Created with Bootstrap Framework by <a href="https://www.instagram.com/_dimaskuy/" class="text-primary" target="_blank">DimasRS</a></h2>
       </div>
     </footer>
 
@@ -218,14 +259,26 @@
     <!-- SweetAlert2 -->
     <script src="swal2/sweetalert2.all.min.js"></script>
 
+    <!-- TiltJS -->
+    <script src="vanilla-tilt.min.js"></script>
+
     <!-- My JavaScript -->
     <script>
+      // AOS Animate
       AOS.init({
         once: true,
         duration: 600,
       });
 
-      const cards = Array.from(document.querySelectorAll(".card"));
+      // TiltJS
+      VanillaTilt.init(document.querySelectorAll(".skills-box"), {
+        max: 25,
+        speed: 1000,
+        glare: true,
+        scale: 1.05,
+      });
+
+      const cards = Array.from(document.querySelectorAll("#projects .card"));
       const lightbox = document.querySelector(".lightbox");
       const lightboxImg = lightbox.querySelector("img");
 

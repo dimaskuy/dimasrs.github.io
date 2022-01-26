@@ -87,6 +87,10 @@ button:active {
   animation: animasiLightboxImg 0.3s;
 }
 
+.lightbox nav {
+  position: fixed;
+}
+
 .lightbox.show {
   display: flex;
   justify-content: center;
@@ -131,7 +135,7 @@ section {
   background: #faf8ff;
 }
 
-.card {
+#projects .card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,7 +148,7 @@ section {
   cursor: zoom-in;
 }
 
-.card .bg-img {
+#projects .card .bg-img {
   width: 19rem;
   height: 13.7rem;
   background-color: #faf8ff;
@@ -156,22 +160,82 @@ section {
   /* transition: 0.2s; */
 }
 
-.card .card-text {
+#projects .card .card-text {
   display: none;
 }
 
-.card#show .card-img-top {
+#projects .card#show .card-img-top {
   position: relative;
   transform: scale(1.05);
 }
 
-.card#show .bg-img,
-.card#show .card-text {
+#projects .card#show .bg-img,
+#projects .card#show .card-text {
   position: absolute;
   display: unset;
 }
-.card#show .bg-img {
+#projects .card#show .bg-img {
   opacity: 0.3;
+}
+
+.skills-box {
+  border-radius: 10px;
+  height: 480px;
+  transform-style: preserve-3d;
+  transform: translateZ(50px);
+  cursor: pointer;
+}
+
+.html5-box {
+  background-color: #e8623c;
+}
+
+.css-box {
+  background-color: rgb(76, 0, 255);
+}
+
+.js-box {
+  background-color: #ce8e4d;
+}
+
+.skills-box h4 {
+  width: 100%;
+  position: absolute;
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 36px;
+  bottom: 0;
+  right: 0;
+  transform: translate(-100%, 100%) translateZ(50px);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.skills-box:hover h4 {
+  transform: translate(0, 0);
+  opacity: 0.6;
+}
+
+.skills-box img {
+  transform: translate(0, 50%) translateZ(50px);
+  filter: drop-shadow(0px 5px rgba(10, 25, 49, 0.2));
+  transition: 0.2s;
+}
+
+.skills-box #html5 {
+  width: 210px;
+}
+.skills-box #css3 {
+  width: 150px;
+}
+.skills-box #js {
+  width: 150px;
+}
+
+.skills-box:hover img {
+  filter: drop-shadow(0px 8px rgba(10, 25, 49, 0.2));
+  opacity: 0.8;
 }
 
 form .btn-loading {
@@ -183,7 +247,9 @@ footer .container {
 }
 
 footer h2 {
-  opacity: 0.5;
+  opacity: 0.3;
+  font-weight: 700;
+  color: #0a1931 !important;
 }
 footer a {
   opacity: 0.5;
@@ -238,6 +304,10 @@ footer a:hover {
 
   .card .card-text {
     font-size: 32px !important;
+  }
+
+  .skills-box {
+    height: 400px;
   }
 }
 
