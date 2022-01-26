@@ -8,6 +8,9 @@ A personal simple portfolio created using:
   <li>Animate on Scroll <br>
       https://michalsnik.github.io/aos/.
   </li>
+  <li>TiltJS <br>
+      https://micku7zu.github.io/vanilla-tilt.js/.
+  </li>
   <li>Vanilla JavaScript.</li>
 </ol>
 
