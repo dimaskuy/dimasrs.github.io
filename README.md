@@ -14,4 +14,4 @@ A personal simple portfolio created using:
   <li>Vanilla JavaScript.</li>
 </ol>
 
-View Demo: https://dimaskuy.github.io/
+View Demo: https://dimaskuy.github.io/dimasrs.github.io/
